@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+       The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the given number?
+*/
+function largestPrimeFactor(n) {
+    let factor = 2;
+
+    while (factor <= n) {
+        if (n % factor === 0) {
+            n /= factor;
+        } else {
+            factor++;
+        }
+    }
+
+    return factor;
+}
+
+alert(largestPrimeFactor(13195));
+
+  
+
+    </script>
+</body>
+</html>
